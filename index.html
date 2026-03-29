@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIZAONE - Premium Gift Solutions for Every Occasion</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: bold; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #FFD700; }
+        .cta-btn { background: #F59E0B; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+        .cta-btn:hover { background: #D97706; transform: translateY(-2px); }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(30,58,138,0.9), rgba(59,130,246,0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8fafc" width="1200" height="600"/><path fill="%23e2e8f0" opacity="0.5" d="M0 200 Q300 100 600 200 T1200 200 V600 H0 Z"/></svg>'); background-size: cover; height: 100vh; display: flex; align-items: center; text-align: center; color: white; margin-top: 80px; }
+        .hero h1 { font-size: 4rem; margin-bottom: 1rem; animation: fadeInUp 1s ease; }
+        .hero p { font-size: 1.5rem; margin-bottom: 2rem; animation: fadeInUp 1s ease 0.2s both; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease 0.4s both; }
+        
+        /* Sections */
+        section { padding: 80px 0; }
+        .about { background: #f8fafc; }
+        .features { background: white; }
+        .products { background: #f1f5f9; }
+        .contact { background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%); color: white; }
+        
+        h2 { font-size: 3rem; text-align: center; margin-bottom: 3rem; color: #1E3A8A; }
+        .about h2 { color: #1E3A8A; }
+        
+        /* Feature Grid */
+        .features-grid, .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .feature-card, .product-card { background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .feature-card:hover, .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .feature-icon { font-size: 4rem; color: #F59E0B; margin-bottom: 1rem; }
+        .product-image { width: 100%; height: 250px; background: linear-gradient(45deg, #F59E0B, #10B981); border-radius: 15px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; }
+        
+        /* Contact Form */
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.5rem; }
+        input, textarea { width: 100%; padding: 15px; border: none; border-radius: 10px; font-size: 16px; background: rgba(255,255,255,0.9); }
+        button { background: #F59E0B; color: white; padding: 15px 40px; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; width: 100%; transition: all 0.3s; }
+        button:hover { background: #D97706; transform: translateY(-2px); }
+        
+        /* Footer */
+        footer { background: #1E3A8A; color: white; text-align: center; padding: 3rem 0 1rem; }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-links a { color: white; font-size: 1.5rem; transition: color 0.3s; }
+        .social-links a:hover { color: #F59E0B; }
+        
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .nav-links { display: none; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">WIZAONE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn">Get Quote</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>✨ Make Every Gift Special with WIZAONE</h1>
+            <p>Premium personalized gift combos designed to create unforgettable moments</p>
+            <div class="hero-buttons">
+                <a href="#products" class="cta-btn" style="background: #F59E0B;">👉 Shop Now</a>
+                <a href="#contact" class="cta-btn" style="background: transparent; border: 2px solid white;">👉 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>🌟 About WIZAONE</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.3rem; color: #64748b; line-height: 1.8;">
+                    At <strong>WIZAONE</strong>, we believe that <em>gifting is an emotion</em>. Whether it's for a birthday, 
+                    corporate appreciation, anniversary, or special celebration, our products are crafted to leave a 
+                    <strong>lasting impression</strong>.
+                </p>
+                <p style="font-size: 1.3rem; color: #64748b; line-height: 1.8; margin-top: 1.5rem;">
+                    We specialize in <strong>custom gift combos</strong> that combine premium quality, unique designs, 
+                    and meaningful personalization to make every occasion truly memorable.
+                </p>
+                <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="color: #1E3A8A; margin-bottom: 1rem;">👨‍💼 Managing Director</h3>
+                    <h4 style="color: #F59E0B; font-size: 1.5rem;">Arunpandian V</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="products" class="features">
+        <div class="container">
+            <h2>✅ Why Choose WIZAONE?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Premium Quality</h3>
+                    <p>Handcrafted with the finest materials and attention to detail for lasting impressions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Unique Designs</h3>
+                    <p>Exclusive designs created by expert artisans, never mass-produced.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gift"></i></div>
+                    <h3>Perfect for Gifting</h3>
+                    <p>Curated combos for birthdays, corporates, anniversaries & celebrations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Premium quality at unbeatable prices without compromising excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase -->
+    <section class="products">
+        <div class="container">
+            <h2>🎁 Featured Gift Combos</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image"><i class="fas fa-birthday-cake"></i></div>
+                    <h3>Birthday Bliss Combo</h3>
+                    <p>Personalized cake box + flowers + card</p>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #F59E0B;">₹2,499</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><i class="fas fa-briefcase"></i></div>
+                    <h3>Corporate Elite Pack</h3>
+                    <p>Branded mug + sweets + diary + pen</p>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #F59E0B;">₹1,999</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><i class="fas fa-heart"></i></div>
+                    <h3>Anniversary Magic</h3>
+                    <p>Rose bouquet + chocolate hamper + frame</p>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #F59E0B;">₹3,299</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>📞 Let's Create Something Special</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Tell us about your gifting needs..." required></textarea>
+                </div>
+                <button type="submit">Send Enquiry Now</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 3rem; font-size: 1.2rem;">
+                <p><i class="fas fa-envelope"></i> support@wizaone.com</p>
+                <p><i class="fas fa-phone"></i> +91 9003139894</p>
+                <p><i class="fas fa-globe"></i> www.wizaone.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="font-size: 2rem; margin-bottom: 1rem;">WIZAONE</div>
+            <p>Premium Gift Solutions for Every Occasion 🎁</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #94A3B8;">© 2026 WIZAONE. All rights reserved. | Delivered across India & Worldwide</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will contact you within 24 hours. 🎁');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
